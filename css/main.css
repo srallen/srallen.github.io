@@ -75,6 +75,8 @@ h1 {
   text-align: center;
   vertical-align: center;
   float: left;
+/*  color: #003366;*/
+  color: #000044;
 }
 
 /*h2 {
@@ -227,10 +229,15 @@ nav ul li:hover {
 }
 
 nav a {
-  color: #C0C0C0;
+  color: #000044;
   text-decoration: none;
   display: inline-block;
 }
+
+.active {
+  background: rgba(0,0,0,0.4);
+}
+
 /*
 nav a:hover {
   color: #003366;
