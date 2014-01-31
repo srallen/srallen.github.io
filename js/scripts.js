@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Navigation
   $('nav > ul').on('click', 'li', function(e) {
     e.preventDefault();
     var $this = $(this);
@@ -12,5 +13,10 @@ $(document).ready(function() {
     container.animate({
       scrollTop: $(destination).offset().top - 140
     }, 1500)
-  })
+  });
+
+  $('figure').hover(function() {
+    $('figcaption').slideToggle('fast');
+  });
+
 });
