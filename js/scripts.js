@@ -11,12 +11,13 @@ $(document).ready(function() {
     list.children().removeClass('active')
     $this.addClass('active')
     container.animate({
-      scrollTop: $(destination).offset().top - 140
+      scrollTop: $(destination).offset().top - 125
     }, 1500)
   });
 
   $('figure').hover(function() {
-    $('figcaption').slideToggle('fast');
+    var $this = $(this);
+    $this.find('figcaption').slideToggle('fast');
   });
 
 });

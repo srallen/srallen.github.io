@@ -7,15 +7,23 @@
 
 
 body {
-  background-color: #555555;
+  background-color: #666666;
 }
 
 /* Layout */
 
-.container {
+#content {
   min-height: 100%;
   height: 100%;
   position: relative;
+  padding-top: 125px !important;
+  padding-bottom: 50px;
+  overflow: auto;
+}
+
+.container {
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 header {
@@ -28,42 +36,66 @@ header {
   display: block;
   float: left;
   background-color: white;
-  border-bottom: solid thick #003366;
+  border-bottom: solid thick #4086AA;
   overflow: hidden;
 }
 
-#content {
-  padding-top: 150px !important;
-  padding-bottom: 50px;
-  overflow: auto;
+.section-head {
+  z-index: 500;
+  background-color: white;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  left: 0;
+  right: 0;
+  border-top: solid medium #4086AA;
+  border-bottom: solid medium #4086AA;
+}
+
+.block {
+  height: 710px;
+}
+
+.container-blue {
+  background-color: #87907D;
 }
 
 footer {
   height: 50px;
+  background-color: white;
   position: absolute;
+  right: 0;
+  left: 0;
   bottom: 0;
   overflow: hidden;
 }
 
+footer > p {
+  color: #4086AA;
+  margin: 10px;
+}
+
 /* Typography */
+
+h1, h2 {
+  color: #4086AA;
+  text-align: center;
+  vertical-align: center;
+}
 
 h1 {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 10px;
   font-size: 40px;
-  text-align: center;
-  vertical-align: center;
   float: left;
-  color: #000044;
 }
 
-/*h2 {
+h2 {
   font-size: 35px;
-  text-align: center;
 }
 
-h3 {
+/*h3 {
   font-size: 25px;
   background-color: white;
   font-size: medium;
@@ -83,7 +115,7 @@ li {
 button {
   height: 50px;
   width: 50px;
-  background-color: #555555;
+  background-color: #666666;
   border-radius: 100%;
   margin: 10px 10px 5px 5px;
   vertical-align: middle;
@@ -97,7 +129,6 @@ p {
   font-size: 16px;
   margin: 0 0 8px;
   padding-top: 20%;*/
-/*  color: #003366;*/
   color: white;
   vertical-align: middle;
   text-align: center;
@@ -112,16 +143,11 @@ small {
 
 hr {
   display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+  border: 5px solid #ccc;
 }
 
 a {
   text-decoration: none;
-/*  color: #003366;*/
   color: #C0C0C0;
 }
 
@@ -135,10 +161,15 @@ a {
 
 
 img {
+  position: relative;
   float: left;
   vertical-align: middle;
-/*  padding: 20px;*/
   margin: 0;
+}
+
+.thumbnail {
+  height: 150%;
+  width: 150%;
 }
 
 #bio-pic {
@@ -169,7 +200,6 @@ nav {
   display: block;
   float: left;
   background-color: white;
-/*  background-color: #91C3DC;*/
   text-align: center;
   overflow: hidden
 }
@@ -193,17 +223,17 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.2);
 }
 
 nav a {
-  color: #000044;
+  color: #4086AA;
   text-decoration: none;
   display: inline-block;
 }
 
 .active {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.2);
 }
 
 /* Content */
@@ -212,13 +242,27 @@ figure {
   float: left;
   position: relative;
   display: inline-block;
-/*  width: 33.33%;*/
   height: auto;
   margin: 0;
+  border: thick solid #555555;
   overflow: hidden;
   color: #FFFFFF;
-/*  background-color: #111111;
-  border: #333 solid 3px;*/
+}
+
+figure:hover {
+  cursor: pointer;
+}
+
+figure span i {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+  color: white;
+  opacity: 1;
+  background:rgba(0,0,0,0.5) center no-repeat;
 }
 
 figcaption {
@@ -227,7 +271,6 @@ figcaption {
   height: 25%;
   position: absolute;
   bottom: 0;
-  z-index: 0;
   overflow: hidden;
   text-align: center;
   background: rgba(0,0,0,0.4);
