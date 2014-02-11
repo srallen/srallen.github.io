@@ -2,7 +2,6 @@
 
 * {
 /*  border: solid thin red;*/
-/*  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;*/
 }
 
 
@@ -41,15 +40,28 @@ header {
 }
 
 .section-head {
+  position: relative;
+  width: 20%;
   z-index: 500;
-  background-color: white;
-  display: block;
+  text-align: center;
+/*  vertical-align: middle;
+  margin-left: 10%;*/
+/*  background-color: white;*/
+/*  display: block;
   padding-top: 10px;
-  padding-bottom: 10px;
-  left: 0;
+  padding-bottom: 10px;*/
+/*  left: 0;
   right: 0;
   border-top: solid medium #4086AA;
-  border-bottom: solid medium #4086AA;
+  border-bottom: solid medium #4086AA;*/
+}
+
+.section-head:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
 }
 
 .block {
@@ -80,7 +92,7 @@ footer > p {
 h1, h2 {
   color: #4086AA;
   text-align: center;
-  vertical-align: center;
+  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
 }
 
 h1 {
@@ -91,16 +103,35 @@ h1 {
   float: left;
 }
 
-h2 {
-  font-size: 35px;
+h3 {
+  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
+  position: absolute;
+  padding: 10px;
+  vertical-align: middle;
+  display: inline-block;
+/*  margin: 10%;*/
+/*  top: 80px;
+  bottom: 50px;*/
+  margin-left: 10px;
+  /*margin-top: 10%;*/
+  color: white;
+/*  text-align: left;*/
 }
 
-/*h3 {
-  font-size: 25px;
-  background-color: white;
-  font-size: medium;
-  padding: 10px;
-  text-align: center;
+/*#reel h3 {
+  bottom: 85%;
+}
+
+#dance h3 {
+  bottom: 65%;
+}
+
+#narrative h3 {
+
+}
+
+#music h3 {
+
 }*/
 
 ul {
@@ -125,9 +156,11 @@ button {
 
 
 p {
-/*  font-family: georgia;
-  font-size: 16px;
-  margin: 0 0 8px;
+  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
+  /*font-family: georgia;*/
+  font-size: 18px;
+  line-height: 30px;
+/*  margin: 0 0 8px;
   padding-top: 20%;*/
   color: white;
   vertical-align: middle;
@@ -144,6 +177,7 @@ small {
 hr {
   display: block;
   border: 5px solid #ccc;
+  margin: 0;
 }
 
 a {
@@ -151,37 +185,9 @@ a {
   color: #C0C0C0;
 }
 
-#icons {
-  float: right;
-}
-
-#icons i {
-  color: white;
-}
-
-
-img {
-  position: relative;
-  float: left;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.thumbnail {
-  height: 150%;
-  width: 150%;
-}
-
-#bio-pic {
-  height: 50%;
-  width: 50%;
-  border-radius: 100%;
-}
-
-#pic {
-  height: 70%;
-  width: 70%;
-  border-radius: 100%;
+.top {
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* Navigation */
@@ -237,6 +243,38 @@ nav a {
 }
 
 /* Content */
+
+#icons {
+  float: right;
+}
+
+#icons i {
+  color: white;
+}
+
+img {
+  position: relative;
+  float: left;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.thumbnail {
+  height: 150%;
+  width: 150%;
+}
+
+#bio-pic {
+  height: 50%;
+  width: 50%;
+  border-radius: 100%;
+}
+
+#pic {
+  height: 70%;
+  width: 70%;
+  border-radius: 100%;
+}
 
 figure {
   float: left;

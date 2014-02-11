@@ -15,6 +15,15 @@ $(document).ready(function() {
     }, 1500)
   });
 
+  $('.top').on('click', function(e) {
+    e.preventDefault();
+    var container = $('html, body');
+
+    container.animate({
+      scrollTop: 0
+    }, 1500)
+  });
+
   $('figure').hover(function() {
     var $this = $(this);
     $this.find('figcaption').slideToggle('fast');
