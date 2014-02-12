@@ -7,14 +7,25 @@
     <title>Matthew Hughes - Cinematographer</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/skeleton.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="shadowbox/shadowbox.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- Scripts -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="./shadowbox/shadowbox.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      Shadowbox.init(
+        { language: 'en',
+          players: ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv'],
+          width: 600,
+          height: 400
+        });
+    </script>
+
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -53,14 +64,15 @@
         <div class="container">
           <div class="row">
             <div class="five columns offset-by-one">
-              <img id="bio-pic" src="images/mattcam.jpg">
+              <img id="bio-pic" src="images/mattcam.jpg" alt="Matthew Hughes">
             </div>
             <div class="seven columns">
-              <figure>
-                <img src="images/reel_thumb.jpg">
-                <figcaption>Matthew Hughes cinematographer reel 2013</figcaption>
-                <span><i class="fa fa-play fa-2x"></i></span>
-              </figure>
+
+                <figure>
+                  <a href="http://player.vimeo.com/video/60497125" rel="shadowbox"><img src="images/reel_thumb.jpg" alt="Reel thumbnail"></a>
+                  <figcaption>Matthew Hughes cinematographer reel 2013</figcaption>
+                  <span><i class="fa fa-play fa-2x"></i></span>
+                </figure>
 
             </div>
           </div>
@@ -80,13 +92,13 @@
           <div class="row">
             <div class="seven columns offset-by-one">
               <figure>
-                <img src="images/lament_thumb.jpg">
+                <a href="http://www.youtube.com/v/DLGVKvbad-g" rel="shadowbox"><img src="images/lament_thumb.jpg" alt="Lamentation Variation thumbnail"></a>
                 <figcaption>Lamentation Variation - The Leopold Group<br>dance performance, 2013</figcaption>
               </figure>
             </div>
             <div class="seven columns">
               <figure>
-                <img src="images/correct_thumb.jpg">
+                <a href="http://www.youtube.com/v/qqPghEnL998" rel="shadowbox"><img src="images/correct_thumb.jpg" alt="A Correct Likeness thumbnail"></a>
                 <figcaption>A Correct Likeness - The Leopoold Group<br>dance performance, 2012</figcaption>
               </figure>
             </div>
@@ -94,13 +106,13 @@
           <div class="row">
             <div class="seven columns offset-by-one">
               <figure>
-                <img src="images/marat_thumb.jpg">
+                <a href="http://www.youtube.com/v/mxRshmfQkEk" rel="shadowbox"><img src="images/marat_thumb.jpg" alt="The Death of Marat thumbnail"></a>
                 <figcaption>The Death of Marat 1793 - DanszLoop Chicago<br>dance performance, 2011</figcaption>
               </figure>
             </div>
             <div class="seven columns">
               <figure>
-                <img src="images/groove_thumb.jpg">
+                <a href="http://www.youtube.com/v/aYigmmpOhlo" rel="shadowbox"><img src="images/groove_thumb.jpg" alt="Stuck Between Stations thumbnail"></a>
                 <figcaption>Stuck Between Stations - Be The Groove<br>dance performance, 2010</figcaption>
               </figure>
             </div>
@@ -129,13 +141,13 @@
          <div class="row">
             <div class="seven columns offset-by-one">
               <figure>
-                <img src="images/city_thumb.jpg">
+                <a href="http://www.youtube.com/v/OZjoJ_8HtFg" rel="shadowbox"><img src="images/city_thumb.jpg" alt="A City to Make Me thumbnail"></a>
                 <figcaption>A City to Make Me<br>short film, directed by Ryan Miller, 2011</figcaption>
               </figure>
             </div>
             <div class="seven columns">
               <figure>
-                <img src="images/file13_thumb.jpg">
+                <a href="http://www.youtube.com/v/cjb2RaQezlY" rel="shadowbox"><img src="images/file13_thumb.jpg" alt="File 13 thumbnail"></a>
                 <figcaption>File 13<br>television pilot, directed by Benjamin Capps, 2012</figcaption>
               </figure>
             </div>
@@ -143,7 +155,7 @@
           <div class="row">
             <div class="seven columns offset-by-five">
               <figure>
-                <img src="images/gaff_thumb.jpg">
+                <a href="https://player.vimeo.com/video/20966749" rel="shadowbox"><img src="images/gaff_thumb.jpg" alt="noir lighting reel thumbnail"></a>
                 <figcaption>Matthew Hughes noir lighting reel, 2010</figcaption>
               </figure>
             </div>
@@ -172,13 +184,13 @@
           <div class="row">
             <div class="seven columns offset-by-one">
               <figure>
-                <img src="images/gtl_thumb.jpg">
+                <a href="http://www.youtube.com/v/Tso2qqx3K14" rel="shadowbox"><img src="images/gtl_thumb.jpg" alt="GTL thumbnail"></a>
                 <figcaption>GTL - Jersey Shore: The Musical<br>music video, directed by Jason Lord, 2012</figcaption>
               </figure>
             </div>
             <div class="seven columns">
               <figure>
-                <img src="images/missyou_thumb.jpg">
+                <a href="http://www.youtube.com/v/EnTJowf78vc" rel="shadowbox"><img src="images/missyou_thumb.jpg" alt="I Miss You thumbnail"></a>
                 <figcaption>I Miss You - Jersey Shore: The Musical<br>music video, directed by Jason Lord, 2012</figcaption>
               </figure>
             </div>
@@ -186,7 +198,7 @@
           <div class="row">
             <div class="seven columns offset-by-five">
               <figure>
-                <img src="images/badboy_thumb.jpg">
+                <a href="http://www.youtube.com/v/LUofvq-bYoE" rel="shadowbox"><img src="images/badboy_thumb.jpg" alt="Bad Boy thumbnail"></a>
                 <figcaption>Bad Boy - K'rdoe<br>music video, directed by Jason Laws, 2012</figcaption>
               </figure>
             </div>
@@ -215,13 +227,13 @@
           <div class="row">
             <div class="seven columns offset-by-one">
               <figure>
-                <img src="images/babc_thumb.jpg">
+                <a href="https://player.vimeo.com/video/67682977" rel="shadowbox"><img src="images/babc_thumb.jpg" alt="Buck Rydell thumbnail"></a>
                 <figcaption>Buck Rydell's BABC 5000<br>infomercial, 2012</figcaption>
               </figure>
             </div>
             <div class="seven columns">
               <figure>
-                <img src="images/cac_thumb.jpg">
+                <a href="https://player.vimeo.com/video/72514440" rel="shadowbox"><img src="images/cac_thumb.jpg" alt="Chicago Audio Collective thumbnail"></a>
                 <figcaption>Chicago Audio Collective<br>demonstration videos, 2013</figcaption>
               </figure>
             </div>
@@ -229,7 +241,7 @@
           <div class="row">
             <div class="seven columns offset-by-five">
               <figure>
-                <img src="images/rockscho_thumb.jpg">
+                <a href="http://www.youtube.com/v/SNcqvhh-Skw" rel="shadowbox"><img src="images/rockscho_thumb.jpg" alt="Naperville Music Rock School thumbnail"></a>
                 <figcaption>Naperville Music Rock School<br>promotional video, 2013</figcaption>
               </figure>
             </div>
@@ -257,7 +269,7 @@
         <div class="container">
           <div class="row">
             <div class="five columns">
-              <img id="pic" src="images/mugshot.jpeg">
+              <img id="pic" src="images/mugshot.jpeg" alt="Matthew Hughes">
             </div>
             <div class="five columns">
               <ul>
@@ -284,7 +296,6 @@
       </footer>
     </div>
 
-    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
