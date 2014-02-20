@@ -114,7 +114,9 @@ button {
   cursor: pointer;
 }
 
-
+#contact button {
+  background-color: #333;
+}
 
 p {
   font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
@@ -217,6 +219,11 @@ nav a:visited {
   color: white;
 }
 
+#contact #icons {
+  visibility: hidden;
+  float: center;
+}
+
 img {
   position: relative;
   float: left;
@@ -287,6 +294,16 @@ figcaption {
 
 /* Media Queries for image resizing */
 
+@media only screen and (min-width: 1186px) and (max-width: 1212px) {
+  #contact #icons { visibility: visible; }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1185px) {
+  h3 { visibility: hidden; }
+
+  #contact #icons { visibility: visible; }
+}
+
 /* Tablet Portrait. Note: Design for a width of 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -296,6 +313,8 @@ figcaption {
   }
 
   h3 { visibility: hidden; }
+
+  #contact #icons { visibility: visible; }
 
 }
 
@@ -308,6 +327,8 @@ figcaption {
   }
 
   h3 { visibility: hidden; }
+
+  #contact #icons { visibility: visible; }
 }
 
 /* Mobile Landscape. Note: Design for a width of 480px */
@@ -318,7 +339,9 @@ figcaption {
     height: 235px;
   }
 
-  h3 { visibility: hidden;}
+  h3 { visibility: hidden; }
+
+  #contact #icons { visibility: visible; }
 
 }
 
