@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // Navigation
+
 
   // Scroll To
   $('nav > ul').on('click', 'li', function(e) {
@@ -30,28 +30,7 @@ $(document).ready(function() {
     list.children().first().addClass('active');
   });
 
-  // Add active class while manually scrolling
-  // $(window).scroll(function() {
-  //   var position = $(window).scrollTop();
-  //   var lastSection = $('#contact').position().top;
-  //   var bottom = $(document).height();
-  //   if (position >= 125) {
-  //     $('section').each(function(i) {
-  //       if ($(this).position().top <= position + 125) {
-  //         $('nav > ul').children().removeClass('active');
-  //         $('nav > ul > li').eq(i).addClass('active');
-  //       }
-  //     });
-  //   } else {
-  //     $('nav > ul').children().removeClass('active');
-  //     $('nav > ul > li:first').addClass('active');
-  //   }
-  //   if (position >= lastSection && position <= bottom) {
-  //     $('nav > ul').children().removeClass('active');
-  //     $('nav > ul > li:last').addClass('active');
-  //   }
-  // });
-
+  // Add active class while scrolling for nav
   var secPosition = [];
   $('section').each(function() {
     secPosition.push($(this).offset().top);

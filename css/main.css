@@ -143,9 +143,18 @@ hr {
   margin: 0;
 }
 
-a {
+p a {
   text-decoration: none;
-  color: #555555;
+  color: silver;
+}
+
+li a {
+  text-decoration: none;
+  color: silver;
+}
+
+li a:visited {
+  color: silver;
 }
 
 .top {
@@ -243,8 +252,8 @@ img {
 }
 
 #pic {
-  height: 70%;
-  width: 70%;
+  height: 200px;
+  width: 200px;
   border-radius: 100%;
 }
 
@@ -294,12 +303,12 @@ figcaption {
 
 /* Media Queries for image resizing */
 
-@media only screen and (min-width: 1186px) and (max-width: 1212px) {
+@media only screen and (min-width: 1281px) and (max-width: 1212px) {
   #contact #icons { visibility: visible; }
 }
 
-@media only screen and (min-width: 960px) and (max-width: 1185px) {
-  h3 { visibility: hidden; }
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  h3 { display: none; }
 
   #contact #icons { visibility: visible; }
 }
@@ -312,7 +321,7 @@ figcaption {
     height: 203px;
   }
 
-  h3 { visibility: hidden; }
+  h3 { display: none; }
 
   #contact #icons { visibility: visible; }
 
@@ -326,7 +335,7 @@ figcaption {
     height: 168px;
   }
 
-  h3 { visibility: hidden; }
+  h3 { display: none; }
 
   #contact #icons { visibility: visible; }
 }
@@ -339,11 +348,26 @@ figcaption {
     height: 235px;
   }
 
-  h3 { visibility: hidden; }
+  h1 { font-size: 30px; }
+
+  h3 { display: none; }
 
   #contact #icons { visibility: visible; }
 
+  #pic { display: none; }
+
 }
 
+@media only screen and (min-width: 466px) and (max-width: 550px) {
+  h1 { font-size: 25px; }
+
+  #pic { display: none; }
+}
+
+@media only screen and (max-width: 465px) {
+  h1 { font-size: 20px; }
+
+  #pic { display: none;}
+}
 
 
