@@ -12,9 +12,15 @@ $(document).ready(function() {
 
     list.children().removeClass('active');
     $this.addClass('active');
-    container.animate({
-      scrollTop: $(destination).offset().top - 125
-    }, 1500)
+    if ($('nav').hasClass('display-mobile')) {
+      container.animate({
+        scrollTop: $(destination).offset().top - 165
+      }, 1500)
+    } else {
+      container.animate({
+        scrollTop: $(destination).offset().top - 125
+      }, 1500)
+    }
   });
 
   // Back to Top
