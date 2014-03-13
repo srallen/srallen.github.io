@@ -1,18 +1,18 @@
 $(document).ready(function() {
-
+  var list = $('nav > ul');
+  var container = $('html, body');
 
   // Scroll To
   $('nav > ul').on('click', 'li', function(e) {
     e.preventDefault();
     var $this = $(this);
-    var list = $('nav > ul');
-    var container = $('html, body');
     var origin = $this.find('a').attr('name');
     var destination = $('#' + origin);
+    var mobileNav = $('#mobile-nav').is(':visible');
 
     list.children().removeClass('active');
     $this.addClass('active');
-    if ($('nav').hasClass('display-mobile')) {
+    if (mobileNav) {
       container.animate({
         scrollTop: $(destination).offset().top - 165
       }, 1500)
@@ -26,8 +26,6 @@ $(document).ready(function() {
   // Back to Top
   $('.top').on('click', function(e) {
     e.preventDefault();
-    var container = $('html, body');
-    var list = $('nav > ul');
 
     container.animate({
       scrollTop: 0
@@ -39,11 +37,17 @@ $(document).ready(function() {
   // Add active class while scrolling for nav
   var secPosition = [];
   $('section').each(function() {
-    secPosition.push($(this).offset().top);
+    if ($('#mobile-nav').is(':visible')) {
+      var secTop = $(this).offset().top + 165;
+    } else {
+      var secTop = $(this).offset().top + 125;
+    }
+    secPosition.push(secTop);
   });
 
   $(window).on('scroll', function() {
     var position = $(window).scrollTop(), index;
+    var mobileNav = $('#mobile-nav').is(':visible');
 
     for (var i=0; i<secPosition.length; i++) {
       if (position <= secPosition[i]) {
@@ -52,8 +56,13 @@ $(document).ready(function() {
       }
     }
 
-    $('nav ul li').removeClass('active');
-    $('nav ul li:eq('+index+')').addClass('active');
+    if (mobileNav) {
+      $('#mobile-nav li').removeClass('active');
+      $('#mobile-nav li:eq('+index+')').addClass('active');
+    } else {
+      $('#desktop-nav li').removeClass('active');
+      $('#desktop-nav li:eq('+index+')').addClass('active');
+    }
   });
 
   // Figure Captions
