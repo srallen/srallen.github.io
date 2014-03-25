@@ -9,17 +9,21 @@
 
 /* Table of Content
 ==================================================
-	#Site Styles
-	#Page Styles
-	#Media Queries
-	#Font-Face */
+  #Site Styles
+  #Page Styles
+  #Media Queries
+  #Font-Face */
 
 /* #Site Styles
 ================================================== */
 
 /* Layout */
 
-body { background-color: #666666; }
+body {
+  background: #2C2416 url("../images/truck.jpg") no-repeat;
+  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
+  max-width: 2000px;
+}
 
 #content {
   min-height: 100%;
@@ -40,6 +44,14 @@ body { background-color: #666666; }
   margin-right: 5px;
 }
 
+#dance { background-color: #2C2416;}
+#narrative { background-color: #fdf5ef; }
+#music { background-color: #2C2416;}
+#commercial { background-color: #fdf5ef; }
+#contact { background-color: #2C2416; }
+
+.block { height: 780px; }
+
 header {
   z-index: 500;
   position: fixed;
@@ -49,14 +61,14 @@ header {
   right: 0;
   display: block;
   float: left;
-  background-color: white;
+  background-color: rgba(44,36,32,0.8);
   border-bottom: solid thick #4086AA;
   overflow: hidden;
 }
 
 footer {
-  height: 50px;
-  background-color: white;
+  height: 75px;
+  background-color: #2C2416;
   position: absolute;
   right: 0;
   left: 0;
@@ -64,9 +76,11 @@ footer {
   overflow: hidden;
 }
 
-footer > p {
-  color: #4086AA;
+footer p {
   margin: 10px;
+  padding-top: 10px;
+  float: left;
+  font-size: 14px;
 }
 
 /* Navigation */
@@ -84,7 +98,7 @@ nav {
   margin: 0px auto;
   display: block;
   float: left;
-  background-color: white;
+  background-color: rgba(44,36,32,0.8);
   text-align: center;
   overflow: hidden
 }
@@ -107,7 +121,7 @@ nav ul li {
   text-align: center;
 }
 
-nav ul li:hover { background: rgba(0,0,0,0.2); }
+nav ul li:hover { background-color: rgba(44,36,32,1); font-weight: bold; }
 
 nav li a {
   color: #4086AA;
@@ -118,7 +132,7 @@ nav li a {
 
 nav li a:visited { color: #4086AA; }
 
-.active { background: rgba(0,0,0,0.2); }
+.active { background-color: rgba(44,36,32,1); font-weight: bold; }
 
 nav.display-mobile { height: 95px; }
 
@@ -149,6 +163,10 @@ h1 {
   float: left;
 }
 
+.highlight {
+  background-color: rgba(44,36,32,0.8);
+}
+
 h3 {
   font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
   position: absolute;
@@ -156,36 +174,50 @@ h3 {
   vertical-align: middle;
   display: inline-block;
   margin-left: 10px;
-  color: white;
+  color: #4086AA;
 }
-
-
-ul {
-  list-style: none;
-  vertical-align: middle;
-}
-
-li { color: white; }
 
 button {
   height: 50px;
   width: 50px;
-  background-color: #666666;
+  background-color: #2C2416;
   border-radius: 100%;
   margin: 10px 10px 5px 5px;
   vertical-align: middle;
   cursor: pointer;
+  text-shadow: none;
+  border: 0;
+  border-top: 0px;
+  border-left: 0px;
 }
 
-#contact button { background-color: #333; }
+button:hover {
+  background: #2C2416; /* Old browsers */
+  background: #2C2416 -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+  background: #2C2416 -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+  background: #2C2416 -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+  background: #2C2416 -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+  background: #2C2416 -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+  background: #2C2416 linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+  border: 0;
+  border-top: 0px;
+  border-left: 0px;
+}
 
 p {
-  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
   font-size: 18px;
   line-height: 30px;
-  color: white;
+  color: #4086AA;
   vertical-align: middle;
   text-align: center;
+}
+
+#bio {
+  padding: 20px;
+}
+
+.highlight {
+  background-color: rgba(44,36,32,0.8);
 }
 
 small {
@@ -203,30 +235,36 @@ hr {
 
 p a {
   text-decoration: none;
-  color: silver;
+  color: #4086AA;
+  font-weight: bold;
 }
 
-li a {
-  text-decoration: none;
-  color: silver;
+p a:hover {
+  text-decoration: underline;
 }
 
-li a:visited { color: silver; }
+p a:visited {
+  color: #4086AA;
+  font-weight: bold;
+}
 
 .top {
   margin-bottom: 35px;
   text-align: center;
 }
 
+.button-top {
+  color: rgba(0,0,0,0.9) !important;
+}
+
 /* Content */
 
-#icons { float: right; }
+.icons { float: right; }
 
-#icons i { color: white; }
+.icons i { color: white; }
 
-#contact #icons {
-  visibility: hidden;
-  float: center;
+footer .icons {
+  display: none;
 }
 
 img {
@@ -236,26 +274,20 @@ img {
   margin: 0;
 }
 
-#pic {
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-}
-
 figure {
   float: left;
   position: relative;
   display: inline-block;
   height: auto;
   margin: 0;
-  border: thick solid #333;
+  border: 10px solid rgba(0,0,0,0.9);
   overflow: hidden;
   color: #FFFFFF;
 }
 
 figure:hover { cursor: pointer; }
 
-figure span i {
+/*figure span i {
   width: 100%;
   height: 50%;
   position: absolute;
@@ -264,8 +296,8 @@ figure span i {
   z-index: 10;
   color: white;
   opacity: 1;
-  background: rgba(0,0,0,0.5) center no-repeat;
-}
+  background: rgba(0,0,0,0.8) center no-repeat;
+}*/
 
 /* Note this is for the default full width screen. See Media Queries below for image resizing for mobile devices */
 figure img {
@@ -287,100 +319,117 @@ figcaption {
 /* #Media Queries
 ================================================== */
 
-	/* Media Queries for image resizing */
+  /* Custom Media Queries */
 
-	@media only screen and (min-width: 1281px) and (max-width: 1212px) {
-	  #contact #icons { visibility: visible; }
-	}
+  @media only screen and (max-width: 1530px) {
+    body { background-position: 20% 0%;}
+  }
 
-	@media only screen and (min-width: 960px) and (max-width: 1280px) {
-	  h3 { display: none; }
+  @media only screen and (min-width: 1212px) and (max-width: 1281px) {
+    body { background-position: 30% 0%;}
+  }
 
-	  #contact #icons { visibility: visible; }
-	}
+  @media only screen and (min-width: 960px) and (max-width: 1280px) {
+    h3 { display: none; }
+  }
 
-	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {}
+  @media only screen and (max-width: 1240px) {
+    body { background-position: 40% 0% }
+    header .icons { display: none; }
+    footer .icons { display: inherit; }
+    h1 { float: none; text-align: center; }
+  }
 
-	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {
-		figure img {
-	    width: 364px;
-	    height: 203px;
-	  }
+  @media only screen and (max-width: 1155px) {
+    footer { height: 125px; }
+    footer p { float: none; text-align: center; }
+    footer .icons { float: none; text-align: center; padding-top: 5px; }
+  }
 
-	  h3 { display: none; }
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {
+    body { background-position: 50% 0% }
+    .block { height: 610px; }
+  }
 
-	  #contact #icons { visibility: visible; }
-	}
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    figure img {
+      width: 364px;
+      height: 203px;
+    }
 
-	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {
-		figure img {
-	    width: 300px;
-	    height: 168px;
-	  }
+    h3 { display: none; }
 
-	  h3 { display: none; }
+    footer .icons { display: inherit; }
+  }
 
-	  #contact #icons { visibility: visible; }
-	}
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {
+    #reel { height: 610px; }
+    #dance { height: 1200px; }
+    #narrative, #music, #commercial { height: 975px; }
 
-	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
-		figure img {
-	    width: 420px;
-	    height: 235px;
-	  }
+    figure img {
+      width: 300px;
+      height: 168px;
+    }
 
-	  h1 { font-size: 30px; }
+    h3 { display: none; }
 
-	  h3 { display: none; }
+    footer .icons { display: inherit; }
+  }
 
-	  #contact #icons { visibility: visible; }
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    figure img {
+      width: 420px;
+      height: 235px;
+    }
 
-	  #pic { display: none; }
-	}
+    h1 { font-size: 30px; }
 
-	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+    h3 { display: none; }
 
-	/* Other Media Queries */
-	@media only screen and (min-width: 466px) and (max-width: 550px) {
-	  h1 { font-size: 25px; }
+    footer .icons { display: inherit; }
+  }
 
-	  #pic { display: none; }
-	}
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {}
 
-	@media only screen and (max-width: 609px) {
-		#content { padding-top: 180px !important; }
+  /* Other Media Queries */
+  @media only screen and (min-width: 466px) and (max-width: 550px) {
+    h1 { font-size: 25px; }
+  }
 
-	  .display-mobile { display: inherit;}
+  @media only screen and (max-width: 609px) {
+    #content { padding-top: 180px !important; }
 
-	  .hide-mobile { display:none; }
-	}
+    .display-mobile { display: inherit;}
 
-	@media only screen and (max-width: 465px) {
-	  h1 { font-size: 20px; }
+    .hide-mobile { display: none; }
+  }
 
-	  #pic { display: none;}
-	}
+  @media only screen and (max-width: 465px) {
+    h1 { font-size: 20px; }
+
+  }
 
 
 
 /* #Font-Face
 ================================================== */
-/* 	This is the proper syntax for an @font-face file
-		Just create a "fonts" folder at the root,
-		copy your FontName into code below and remove
-		comment brackets */
+/*  This is the proper syntax for an @font-face file
+    Just create a "fonts" folder at the root,
+    copy your FontName into code below and remove
+    comment brackets */
 
-/*	@font-face {
-	    font-family: 'FontName';
-	    src: url('../fonts/FontName.eot');
-	    src: url('../fonts/FontName.eot?iefix') format('eot'),
-	         url('../fonts/FontName.woff') format('woff'),
-	         url('../fonts/FontName.ttf') format('truetype'),
-	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
-	    font-weight: normal;
-	    font-style: normal; }
+/*  @font-face {
+      font-family: 'FontName';
+      src: url('../fonts/FontName.eot');
+      src: url('../fonts/FontName.eot?iefix') format('eot'),
+           url('../fonts/FontName.woff') format('woff'),
+           url('../fonts/FontName.ttf') format('truetype'),
+           url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+      font-weight: normal;
+      font-style: normal; }
