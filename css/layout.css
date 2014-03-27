@@ -9,10 +9,10 @@
 
 /* Table of Content
 ==================================================
-  #Site Styles
-  #Page Styles
-  #Media Queries
-  #Font-Face */
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
 
 /* #Site Styles
 ================================================== */
@@ -53,6 +53,7 @@ body {
 .block { height: 780px; }
 
 header {
+  max-width: 2000px;
   z-index: 500;
   position: fixed;
   height: 80px;
@@ -86,6 +87,7 @@ footer p {
 /* Navigation */
 
 nav {
+  max-width: 2000px;
   z-index: 300;
   position: fixed;
   height: 45px;
@@ -121,7 +123,21 @@ nav ul li {
   text-align: center;
 }
 
-nav ul li:hover { background-color: rgba(44,36,32,1); font-weight: bold; }
+nav ul li:hover {
+  background-color: rgba(44,36,32,1);
+  font-weight: bold;
+  text-shadow: 0 0 .5px #4086AA;
+}
+
+/*nav ul li::after {
+  display:block;
+  content:attr(title);
+  font-weight:bold;
+  height:1px;
+  color:transparent;
+  overflow:hidden;
+  visibility:hidden;
+}*/
 
 nav li a {
   color: #4086AA;
@@ -132,7 +148,11 @@ nav li a {
 
 nav li a:visited { color: #4086AA; }
 
-.active { background-color: rgba(44,36,32,1); font-weight: bold; }
+.active {
+  background-color: rgba(44,36,32,1);
+  font-weight: bold;
+  text-shadow: 0 0 .5px #4086AA;
+}
 
 nav.display-mobile { height: 95px; }
 
@@ -150,9 +170,9 @@ nav.display-mobile { height: 95px; }
 /* Typography */
 
 h1, h2 {
+  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
   color: #4086AA;
   text-align: center;
-  font-family: futura, 'century gothic', geneva, 'gil sans', helvetica;
 }
 
 h1 {
@@ -177,6 +197,10 @@ h3 {
   color: #4086AA;
 }
 
+/*#reel-header {
+  margin-top: 325px;
+}*/
+
 button {
   height: 50px;
   width: 50px;
@@ -187,8 +211,8 @@ button {
   cursor: pointer;
   text-shadow: none;
   border: 0;
-  border-top: 0px;
-  border-left: 0px;
+	border-top: 0px;
+	border-left: 0px;
 }
 
 button:hover {
@@ -227,12 +251,6 @@ small {
   color: white;
 }
 
-hr {
-  display: block;
-  border: 3px solid #ccc;
-  margin: 0;
-}
-
 p a {
   text-decoration: none;
   color: #4086AA;
@@ -244,8 +262,8 @@ p a:hover {
 }
 
 p a:visited {
-  color: #4086AA;
-  font-weight: bold;
+	color: #4086AA;
+	font-weight: bold;
 }
 
 .top {
@@ -263,9 +281,7 @@ p a:visited {
 
 .icons i { color: white; }
 
-footer .icons {
-  display: none;
-}
+footer .icons { display: none; }
 
 img {
   position: relative;
@@ -280,7 +296,7 @@ figure {
   display: inline-block;
   height: auto;
   margin: 0;
-  border: 10px solid rgba(0,0,0,0.9);
+  border: 5px solid rgba(0,0,0,0.9);
   overflow: hidden;
   color: #FFFFFF;
 }
@@ -306,7 +322,7 @@ figure img {
 }
 
 figcaption {
-  display: none;
+  display: inherit;
   width: 100%;
   height: 25%;
   position: absolute;
@@ -316,22 +332,26 @@ figcaption {
   background: rgba(0,0,0,0.4);
 }
 
+.toggle-cap {
+  display: none;
+}
+
 /* #Media Queries
 ================================================== */
 
-  /* Custom Media Queries */
+	/* Custom Media Queries */
 
   @media only screen and (max-width: 1530px) {
-    body { background-position: 20% 0%;}
+    body { background-position: 20% 0%; }
   }
 
-  @media only screen and (min-width: 1212px) and (max-width: 1281px) {
-    body { background-position: 30% 0%;}
-  }
+	@media only screen and (min-width: 1212px) and (max-width: 1281px) {
+    body { background-position: 30% 0%; }
+	}
 
-  @media only screen and (min-width: 960px) and (max-width: 1280px) {
-    h3 { display: none; }
-  }
+	@media only screen and (max-width: 1280px) {
+	  h3 { display: none; }
+	}
 
   @media only screen and (max-width: 1240px) {
     body { background-position: 40% 0% }
@@ -340,96 +360,87 @@ figcaption {
     h1 { float: none; text-align: center; }
   }
 
-  @media only screen and (max-width: 1155px) {
+  @media only screen and (max-width: 1180px) {
     footer { height: 125px; }
     footer p { float: none; text-align: center; }
     footer .icons { float: none; text-align: center; padding-top: 5px; }
   }
 
-  /* Smaller than standard 960 (devices and browsers) */
-  @media only screen and (max-width: 959px) {
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
     body { background-position: 50% 0% }
     .block { height: 610px; }
   }
 
-  /* Tablet Portrait size to standard 960 (devices and browsers) */
-  @media only screen and (min-width: 768px) and (max-width: 959px) {
-    figure img {
-      width: 364px;
-      height: 203px;
-    }
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		figure img {
+	    width: 364px;
+	    height: 203px;
+	  }
 
-    h3 { display: none; }
+	  footer .icons { display: inherit; }
+	}
 
-    footer .icons { display: inherit; }
-  }
-
-  /* All Mobile Sizes (devices and browser) */
-  @media only screen and (max-width: 767px) {
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
     #reel { height: 610px; }
     #dance { height: 1200px; }
     #narrative, #music, #commercial { height: 975px; }
 
-    figure img {
-      width: 300px;
-      height: 168px;
-    }
+		figure img {
+	    width: 300px;
+	    height: 168px;
+	  }
 
-    h3 { display: none; }
+	  footer .icons { display: inherit; }
+	}
 
-    footer .icons { display: inherit; }
-  }
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		figure img {
+	    width: 420px;
+	    height: 235px;
+	  }
 
-  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    figure img {
-      width: 420px;
-      height: 235px;
-    }
+	  h1 { font-size: 30px; }
+	}
 
-    h1 { font-size: 30px; }
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
 
-    h3 { display: none; }
+	/* Other Media Queries */
+	@media only screen and (min-width: 466px) and (max-width: 550px) {
+	  h1 { font-size: 25px; }
+	}
 
-    footer .icons { display: inherit; }
-  }
+	@media only screen and (max-width: 609px) {
+		#content { padding-top: 180px !important; }
 
-  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-  @media only screen and (max-width: 479px) {}
+	  .display-mobile { display: inherit;}
 
-  /* Other Media Queries */
-  @media only screen and (min-width: 466px) and (max-width: 550px) {
-    h1 { font-size: 25px; }
-  }
+	  .hide-mobile { display: none; }
+	}
 
-  @media only screen and (max-width: 609px) {
-    #content { padding-top: 180px !important; }
-
-    .display-mobile { display: inherit;}
-
-    .hide-mobile { display: none; }
-  }
-
-  @media only screen and (max-width: 465px) {
-    h1 { font-size: 20px; }
-
-  }
+	@media only screen and (max-width: 465px) {
+	  h1 { font-size: 20px; }
+	}
 
 
 
 /* #Font-Face
 ================================================== */
-/*  This is the proper syntax for an @font-face file
-    Just create a "fonts" folder at the root,
-    copy your FontName into code below and remove
-    comment brackets */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
 
-/*  @font-face {
-      font-family: 'FontName';
-      src: url('../fonts/FontName.eot');
-      src: url('../fonts/FontName.eot?iefix') format('eot'),
-           url('../fonts/FontName.woff') format('woff'),
-           url('../fonts/FontName.ttf') format('truetype'),
-           url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
-      font-weight: normal;
-      font-style: normal; }
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }

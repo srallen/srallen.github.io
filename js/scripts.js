@@ -68,7 +68,7 @@ $(document).ready(function() {
   // Figure Captions
   $('figure').hover(function() {
     var $this = $(this);
-    $this.find('figcaption').slideToggle('fast');
+    $this.find('figcaption.toggle-cap').slideToggle('fast');
   });
 
 });
