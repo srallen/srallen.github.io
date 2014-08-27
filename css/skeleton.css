@@ -234,6 +234,7 @@
     /* You can also use a <br class="clear" /> to clear columns */
     .clear {
       clear: both;
+      display: -moz-inline-block;
       display: block;
       overflow: hidden;
       visibility: hidden;
